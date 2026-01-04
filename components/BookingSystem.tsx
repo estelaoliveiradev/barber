@@ -70,7 +70,7 @@ export const BookingSystem: React.FC = () => {
                 className={`p-3 text-left border rounded transition-all ${selectedService === service.id ? 'border-[#d4af37] bg-[#d4af37]/5 ring-1 ring-[#d4af37]' : 'border-white/10 hover:border-white/20'}`}
               >
                 <p className="text-sm font-bold uppercase mb-1">{service.name}</p>
-                <p className="text-xs accent-gold">R$ {service.price.toFixed(0)}</p>
+                <p className="text-xs accent-gold">{service.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
               </button>
             ))}
           </div>
