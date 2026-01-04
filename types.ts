@@ -22,9 +22,10 @@ export interface Booking {
   customerPhone: string;
 }
 
+export type AvailabilityMap = Record<string, string[]>; // dateIso -> array of blocked times
+
+// ChatMessage interface for the AI Assistant component
 export interface ChatMessage {
   role: 'user' | 'model';
   text: string;
 }
-
-export type AvailabilityMap = Record<string, string[]>; // dateIso -> array of blocked times
